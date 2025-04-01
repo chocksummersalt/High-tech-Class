@@ -121,11 +121,10 @@ void main()
 
 	printf("거꾸로 출력한 결과==> %s \n", tt);
 }*/
-
+/*
 #define _CRT_SECURE_NO_WARNINGS
 #include<string.h>*/
-#include<stdio.h>
-void main()
+
 /* {
 	char ss[] = "XYZ";
 	int len;
@@ -245,23 +244,149 @@ char ss[7] = "xyz";
 	scanf("%c %c", &ch1, &ch2);
 
 	for(i=0; i < strlen(str); i++)//각 문자 하나하나를 검사하기 i가 하나하나 돌아다니는 역할을 함
-	{ 
+	{
 		if (str[i] == ch1)
 			str[i] = ch2;
 	}
 }*/
-{
+/*{
 	int i, j;
 	for (j = 0; j < 10; j++)
 	{
-		for (i = 0; i < j+1; i++)
+		for (i = 10; i 0; i--)
 		{
-			if (i == 0 || j == 0 || i == j)
+			if (i == j+1  || j == i-1 || i == j)
 				printf("*");
 			else
 				printf(" ");
 		}
 		printf("\n");
 	}
+
+}*/
+/*	int i, j, n = 5;  // n은 피라미드 높이
+
+	for (i = 0; i < n; i++) {  // 행 반복
+		for (j = 0; j < n - i - 1; j++) {  // 왼쪽 공백 출력
+			printf(" ");
+		}
+		for (j = 0; j < 2 * i + 1; j++) {  // 별 출력
+			if (j == 0 || j == 2 * i || i == n - 1) {
+				printf("*");  // 테두리 부분
+		}
+		else {
+			printf(" ");  // 내부 공백
+		}
+	}
+	printf("\n");  // 줄바꿈
+}
+
+return 0;
+}*/
+/*{ //내부가 빈 피라미드 그리기
+   int i, j, n = 5;  // n은 피라미드 높이
+
+   for (i = 0; i < n; i++) {  // 행 반복
+	   for (j = 0; j < n - i - 1; j++) {  // 왼쪽 공백 출력
+		   printf(" ");
+	   }
+	   for (j = 0; j < 2 * i + 1; j++) {  // 별 출력
+		   if (j == 0 || j == 2 * i || i == n - 1) {
+			   printf("*");  // 테두리 부분
+		   } else {
+			   printf(" ");  // 내부 공백
+		   }
+	   }
+	   printf("\n");  // 줄바꿈
+   }
+}*/
+
+/*{
+	char stack[5];
+	int top = 0;
+
+	stack[top] = 'A';
+	printf(" %c 자동차가 터널에 들어감 \n", stack[top]);
+	top++;
+
+	stack[top] = 'B';
+	printf("%c 자동차가 터널에 들어감 \n", stack[top]);
+	top++;
+
+	printf("\n");
+
+	top--;
+	printf(" %c 자동차가 터널을 빠져나감 \n", stack[top]);
+	stack[top] = " ";
+
+	top--;
+	printf(" %c 자동차가 터널을 빠져나감 \n", stack[top]);
+	stack[top] = " ";
+
+
+}*/
+
+
+/*{
+	int a = 100;
+	int b = 200;
+
+	printf("변수 a의 주소는 %d 입니다. \n", &a);
+	printf("변수 b의 주소는 %d 입니다. \n", &b);
+*/
+	/*{int aa[3] = { 10, 20, 30 };
+
+printf("&aa[0]의 값은 %d, aa+0은 %d \n", &aa[0], aa+0);
+printf("&aa[1]의 값은 %d, aa+1은 %d \n", &aa[1], aa+1);
+printf("&aa[2]의 값은 %d, aa+2은 %d \n", &aa[2], aa+2);
+printf("배열 이름 aa의 값=주소는 %d \n", aa);
+
+
+}*/
+#include<stdio.h>
+void main()
+{
+	/*char ch;
+	char* p;
+	char* q;
+
+	ch = 'A';
+	p = &ch;
+	
+	q = p;
+
+	*q = 'Z';
+
+	printf("ch가 가지고 있는 값: ch ==> %c\n\n", ch);
+	/*printf("ch의 주소: &ch ==> %d \n", &ch);
+	printf("p가 가지고 있는 값: p ==> %d \n", p);
+	printf("ch가 가지고 있는 값:*p ==> %c \n", *p);*/
+	/*char s[9] = "CookBook";
+	char *p;
+	int i;
+
+	p = s;
+
+	for (i = sizeof(s) - 2; i >= 0; i--)//sizeof는 바이트계산해주는거 -2 하는 이유는 배열의 시작은 0부터기 때문 8번째 자리는 null이고
 		
+		printf(" % c", *(p + i));
+
+*/
+	int a = 100;
+	int b = 200;
+	int tmp;
+	int* p1;
+	int* p2;
+	
+	p1 = &a;
+	p2 = &b;
+
+	tmp = *p1;
+	*p1 = *p2;
+	*p2 = tmp;
+
+	printf("바뀐 값 a는 %d, b는 %d \n", a, b);
+
+	
+
 }

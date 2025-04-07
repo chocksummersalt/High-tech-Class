@@ -343,7 +343,7 @@ void main()
 
 	fclose(rfp);//ansi로 인코딩된 건 잘읽는데 utf=8로 한건 글씨가 깨지더라.
 }*/
-	char s[20];
+	/*char s[20];
 	FILE* wfp;
 
 	wfp = fopen("C:\\Users\\AISW-006\\Desktop\\data.txt", "w");
@@ -351,5 +351,21 @@ void main()
 	gets(s);
 
 	fputs(s, wfp);
+	fclose(wfp);*/
+
+	FILE* wfp;
+	int hap = 0;
+	int in, i;
+
+	wfp = fopen("C:\\Users\\AISW-006\\Desktop\\data.txt", "w");
+
+	for (i = 0; i < 5; i++)
+	{
+		printf("숫자 %d : ", i + 1);
+		scanf(" %d", &in);
+		hap = hap + in;
+	}
+	fprintf(wfp, "합계 ==> : %d\n", hap);
+
 	fclose(wfp);
 }

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="template.css" rel="stylesheet" type="text/css">
+<title>이케아 할인기간 정리</title>
+</head>
+<body>
+
+<div class="header">
+  <h1>IKEA 탐방기</h1>
+  <p style="color: white;">25년 1월부터 2월까지</p>
+</div>
+
+<div class="topnav">
+  <a href="/introduceme.html">소개</a>
+  <a href="https://www.ikea.com/kr/ko/">볼거리</a>
+  <a href="#">일정</a>
+  <a href="#" style="float:right">기타</a>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>이케아의 고향</h2>
+      <h5>Title description, april, 2025</h5>
+      <img src="image/woman-passing-ikea-store-254aphok9st1cai5.jpg" alt="ikea"style ="width: 750px; height: 400px;">
+      <p><strong>IKEA</strong>는 전 세계의 수많은 사람들, 집들과 연결되어 있습니다. <br>
+        이 모든 것은 1940년대 스웨덴의 한 작은 마을에서 시작했습니다. 세상 모든 곳의 사람들이 더 나은 생활을 누리기를 바랐던 한 진취적인 소년이 그 출발이었죠. </p>
+      <p> 스웨덴 스몰란드는 자갈이 많은 땅에 숲이 우거진 곳이었어요. 지리적 어려움 때문에 마을 사람들은 적은 자원을 최대한 활용하는 법을 찾아냈고, 강인하고 수완 좋은 전문가가 되었습니다.<br>
+         그리고 이러한 자질은 <strong>IKEA</strong>를 구성하는 핵심 가치로 자리잡았죠.<br>
+      </p>
+    </div>
+    <div class="card" style="background-image:url('/image/화면배경.png');">
+      <h2>일정</h2>
+     <!--  <h5>Title description, Sep 2, 2017</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+      -->
+      <ol>
+      <li>새해 할인 : 1/1일 ~ 1/8일 - <strong>배송비 무료</strong></li>
+      <li>새학기 할인 : 1월 15일 ~ 2월 28일 - <strong>15% 할인</strong></li>
+      <li>10주년 생일파티 : 1월~2월 2,4주차 <strong>토요일-케이크 증정</strong></li>
+      <li>오프라인 방문 할인 : 4월 4일 - <strong>할인 품목에 15%중복할인</strong></li>
+      <li>수납장 할인 : 2월 14일 ~ 4월 30일 - <strong>15% 할인</strong></li>
+    </ol>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>About Me</h2>
+      <br>
+      <img src="image/me.jpg" alt="내사진" style="width:55%; height: 100px;" >
+      <p>여긴 이탈리아고.. 이케아에서 찍은 사진은 좋은 사진이 없다.</p>
+    </div>
+    <div class="card2">
+      <h3>설 문 조 사</h3>
+      <form>
+	
+        <div>
+          <strong> 닉네임 </strong>
+          <input type = "text" name = "name" value = "아이디 입력">
+          <!-- type: 입력폼에 클라이언트에게 어떻게 보일지 선택 
+            name: 백엔드에서 받을 때 이름을 지정해주어야 함
+            전송을 했는데 백엔드에서 받지 못했다면 이름 설정했는지 확인해야 한다.
+            value: 실제로 입력폼에 나타나는 값, 초기값 설정하는 역할도 할 수 있다.-->
+        </div>
+      
+        <div>
+          <strong>성별</strong>
+          <input type = "radio" name = "gender" value = "M"> 남자
+          <input type = "radio" name = "gender" value = "F"> 여자
+          <!-- radio: 단일 선택 -->
+        </div>
+        <div>
+          <strong>이케아에 방문한 횟수</strong> <br>
+          <input type = "checkbox" name = "teamname" value = "Pudding"> 평생 1~2회
+          <input type = "checkbox" name = "teamname" value = "Cake"> 3년에 1~2회
+          <input type = "checkbox" name = "teamname" value = "Macaron"> 1년에 1~2회
+          <!-- checkbox: 복수 선택 -->
+        </div>
+        <div>
+          <strong>가까이 있는 이케아 지점</strong>
+          <select name "ikeabranch" id = "ikeabranch">
+            <option value = "고양">고양점</option>
+            <option value = "광명">광명점</option>
+            <option value = "강동">강동점(new)</option>
+          </select>
+        </div>
+        <div>
+          <button type = "submit">Submit</button>
+        </div>
+      
+      </form>
+    </div>
+    <div class="card3">
+      <h3>Follow Me</h3>
+      <a href="http://github.com/chocksummersalt" target="_blank"><img src="/image/7c0a6399bf1b792e076b990bdc2c4520.png" alt="인스타" style="width: 50px; height: 50px; display:inline-block; margin: 0 auto;"></a>
+      <a href="http://instagram.com/sungminq410" target="_blank"><img src="/image/인스타.png" alt="인스타" style="width: 50px; height: 50px; display:inline-block; margin: 0 auto;"></a>
+      <p style="display: block; margin: 5px auto; text-align: center;">@xxxxxxxx</p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div>🏢 (04321) 경기도 고양시 덕양구 화신로 <br>
+협업문의 : 📱 : 064-740-6000~1FAX : 064-740-6090 사업자등록번호 : 616-82-21432<br>
+</div>
+</div>
+
+</body>
+</html>
+
+

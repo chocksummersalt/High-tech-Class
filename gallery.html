@@ -1,0 +1,106 @@
+  <!DOCTYPE html>
+  <html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS Grid Layout</title>
+    <style>      
+
+    body {
+      font-family: sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      font-weight: bold;
+      margin: 10px;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: #444;
+      margin: 0 10px 10px 10px;
+    }
+    .box {
+      background-color: #cfcece;
+      padding: 10px;
+      text-align: left;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card-container">
+
+    <div class="card">
+      <div class="box">사진제목</div>
+      <img src="images/photo-1.jpg" alt="겨울 이미지">
+
+      <p>사진설명: 따뜻한 차가 있는 겨울 풍경</p>
+    </div>
+
+    <div class="card">
+      <div class="box">사진제목</div>
+      <img src="images/photo-2.jpg" alt="펭귄">
+    
+      <p>사진설명: 남극 펭귄</p>
+    </div>
+
+    <div class="card">
+      <div class="box">사진제목</div>
+      <img src="images/photo-3.jpg" alt="눈 덮인 집">
+      <p>사진설명: 눈이 가득 덮인 시골 풍경</p>
+    </div>
+
+    <div class="card">
+      <div class="box">사진제목</div>
+      <img src="images/photo-4.jpg" alt="오로라">
+      <p>사진설명: 오로라가 보이는 밤 풍경</p>
+    </div>
+
+    <div class="card">
+      <div class="box">사진제목</div>
+      <img src="images/photo-5.jpg" alt="눈 앞 여자">
+      <p>사진설명: 눈 앞의 배경</p>
+    </div>
+
+    <div class="card">
+      <div class="box">사진제목</div>
+      <img src="images/photo-6.jpg" alt="빨간 새">
+      <p>사진설명: 나뭇가지에 앉아있는 빨간 새</p>
+    </div>
+
+  </div>
+
+</body>
+</html>
+

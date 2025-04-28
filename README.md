@@ -1,3 +1,3 @@
-# hightech
+# High-Tech
 
-<h3>python practice archiving folder!</h3>
+<h3>Python practice archiving folder!</h3>

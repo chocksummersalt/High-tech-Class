@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>document.write() 활용</title>
+</head>
+<body>
+<h3>document.write() 활용</h3>
+<hr>
+<script>
+	document.write("<h3>Welcome!</h3>");
+	document.write("2 + 5 는 <br>");	
+	document.write("<mark>7 입니다.</mark>");
+	document.write("<p style ='color:red'>hello, World");
+	//alert("웹문서가 출력되었습니다");
+	console.log("디버깅 할그야~");
+	console.log(2 + 3);
+	console.log('hello \t java');
+	let val = "let declaration";
+	console.log("first cal:" + val)
+	val = "change let val";
+	console.log("change: " + val);
+	//기초문법
+	let x;
+	function f(){
+		let y;
+		let x = 100;
+		this.x = 10; //let로 선언된 건 지역변수로 선언될 수 없음.
+		y=20;
+		z=30;
+		if(y ==20){
+			let b = 40;
+			b++;
+			document.write(b)
+			document.write(y);
+			document.write(x);
+            
+		}
+	}
+    f();
+    document.write(x);
+    document.write(z);
+
+   
+    num=(parseInt("123"));
+    console.log(num);
+
+    for(let size = 10; size<=35; size+=5){
+        document.write("<span ");
+        document.write("style='font-size:"+size+"px'>");
+        document.write(size+"px");
+        document.write("</span>")
+    }
+</script>
+</body>
+</html>

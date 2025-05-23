@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>함수 계산기</title>
+</head>
+<body>
+
+<script>
+  const a = parseInt(prompt("숫자 하나를 입력하세요 (1):"), 10);
+  const b = parseInt(prompt("숫자 하나를 입력하세요 (2):"), 10);
+
+  const add = function(x, y) {
+    const result = x + y;
+    document.write("a + b = " + result + "<br>");
+    return result;
+  };
+
+  const subtract = function(x, y) {
+    const result = x - y;
+    console.log("a - b = " + result);
+    return result;
+  };
+
+    const multiply = function(x, y) {
+    const result = x * y;
+    document.write("a * b = <br>" + result);
+    return result;
+  };
+
+    const divide = function(x, y) 
+    {
+        if(y === 0){
+            alert("0으로 나눌 수 없음")
+            document.write("0으로 나눌 수 없음)<br>")
+    }const result = x / y;
+    document.write("a / b = " + result);
+    return result;
+  };
+
+  // 함수 호출
+  add(a, b);
+  subtract(a, b);
+  multiply(a, b);
+  divide(a, b);
+
+</script>
+
+</body>
+</html>

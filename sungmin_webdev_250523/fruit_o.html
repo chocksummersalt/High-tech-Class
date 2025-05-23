@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>과일사세요~</title>
+  <style>
+    .fruit-image {
+      width: 100px;
+      height: 100px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>과일을 클릭해보세요!</h2>
+  
+  <img src="./image/apple.png" alt="사과" class="fruit-image" onclick="showDescription('apple')">
+  <img src="./image/banana.png" alt="바나나" class="fruit-image" onclick="showDescription('banana')">
+  <img src="./image/orange.png" alt="오렌지" class="fruit-image" onclick="showDescription('orange')">
+
+  <p id="description"></p>
+
+  <script>
+    function showDescription(fruit) {
+      if (fruit === 'apple') {
+        alert( "사과가 왔어요~ .");
+      } else if (fruit === 'banana') {
+        alert("바나나가 왔어요~");
+      } else if (fruit === 'orange') {
+        alert ("오렌지는 상큼하고 비타민 C가 풍부한 과일입니다.");
+      }
+      
+
+      showDescription("")
+    }
+  </script>
+
+</body>
+</html>

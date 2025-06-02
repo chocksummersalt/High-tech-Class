@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원 가입창</title>
+<script type = "text/javascript">
+function fn_sendMember(){
+	var frmMember= document.frmMember;
+	var id = frmMember.id.value;
+	var pwd = frmMember.id.value;
+	var name = frmMember.id.value;
+	var email = frmMember.id.value;
+if(id.length ==0 || id =="") {
+	alert("아이디는 필수");
+
+}
+else if (pwd.length == 0|| pwd == ""){
+	
+	
+}
+else if (pwd.length == 0|| pwd == ""){
+	
+	
+}
+else if (pwd.length == 0|| pwd == ""){
+	
+	
+}
+else {
+	frmMember.method="post";
+	frmMember.action = "member3";
+	frmMember.submit();
+}
+}
+</script>
+</head>
+<body>
+<form name= "frmMember"></form>
+<table>
+<th>회원 가입창</th>th>
+<tr>
+<td>아이디</td>
+<td><input type = "text" name="id"></td>
+</tr>
+
+</table>
+</body>
+</html>

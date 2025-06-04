@@ -4,19 +4,19 @@ void main()
 {
 	int coffee;
 
-	printf("Ä¿ÇÇ ¸î ÀÜÀ» µå¸±±î¿ä? (1ÀÜ, 2ÀÜ, 3ÀÜ)");
+	printf("ì»¤í”¼ ëª‡ ì”ì„ ë“œë¦´ê¹Œìš”? (1ì”, 2ì”, 3ì”)");
 	scanf("%d", &coffee);
 
-	printf("\n #1. ¶ß°Å¿î ¹°À» ÁØºñÇÑ´Ù\n");
-	printf("#2. Á¾ÀÌÄÅÀ» ÁØºñÇÑ´Ù\n");
+	printf("\n #1. ëœ¨ê±°ìš´ ë¬¼ì„ ì¤€ë¹„í•œë‹¤\n");
+	printf("#2. ì¢…ì´ì»µì„ ì¤€ë¹„í•œë‹¤\n");
 
 	switch (coffee)
 	{
 
-	case 1: printf("#3. %d ÀÜÀÇ Ä¿ÇÇ¸¦ Åº´Ù\n", coffee); break;
-	case 2: printf("#3. %d ÀÜÀÇ Ä¿ÇÇ¸¦ Åº´Ù\n", coffee); break;
-	case 3: printf("#3. %d ÀÜÀÇ Ä¿ÇÇ¸¦ Åº´Ù\n", coffee); break;
-	default:printf("#4. »¡¸® ÁÖ¹®ÇØÁÖ¼¼¿ä~\n"); break;
+	case 1: printf("#3. %d ì”ì˜ ì»¤í”¼ë¥¼ íƒ„ë‹¤\n", coffee); break;
+	case 2: printf("#3. %d ì”ì˜ ì»¤í”¼ë¥¼ íƒ„ë‹¤\n", coffee); break;
+	case 3: printf("#3. %d ì”ì˜ ì»¤í”¼ë¥¼ íƒ„ë‹¤\n", coffee); break;
+	default:printf("#4. ë¹¨ë¦¬ ì£¼ë¬¸í•´ì£¼ì„¸ìš”~\n"); break;
 	}
 	
 }
@@ -26,19 +26,19 @@ void main()
 #include <stdio.h>
 int coffee_machine(int button)
 {
-	printf("\n #1. ¶ß°Å¿î ¹°À» ÁØºñÇÑ´Ù\n");
-	printf("#2. Á¾ÀÌÄÅÀ» ÁØºñÇÑ´Ù\n");
+	printf("\n #1. ëœ¨ê±°ìš´ ë¬¼ì„ ì¤€ë¹„í•œë‹¤\n");
+	printf("#2. ì¢…ì´ì»µì„ ì¤€ë¹„í•œë‹¤\n");
 
 	switch (button)
 	{
-	case 1: printf("#3. º¸ÅëÄ¿ÇÇ¸¦ Åº´Ù\n"); break;
-	case 2: printf("#3. ¼³ÅÁÄ¿ÇÇ¸¦ Åº´Ù\n"); break;
-	case 3: printf("#3.  ºí·¢Ä¿ÇÇ¸¦ Åº´Ù\n"); break;
-	default:printf("#3. ¾Æ¹«°Å³ª ÁÖ¹®ÇØÁÖ¼¼¿ä~\n"); break;
+	case 1: printf("#3. ë³´í†µì»¤í”¼ë¥¼ íƒ„ë‹¤\n"); break;
+	case 2: printf("#3. ì„¤íƒ•ì»¤í”¼ë¥¼ íƒ„ë‹¤\n"); break;
+	case 3: printf("#3.  ë¸”ë™ì»¤í”¼ë¥¼ íƒ„ë‹¤\n"); break;
+	default:printf("#3. ì•„ë¬´ê±°ë‚˜ ì£¼ë¬¸í•´ì£¼ì„¸ìš”~\n"); break;
 	}
 
-	printf("#4. ¹°À» º×´Â´Ù\n");
-	printf("#5. ½ºÇ¬À¸·Î Àú¾î¼­ ³ìÀÎ´Ù\n");
+	printf("#4. ë¬¼ì„ ë¶“ëŠ”ë‹¤\n");
+	printf("#5. ìŠ¤í‘¼ìœ¼ë¡œ ì €ì–´ì„œ ë…¹ì¸ë‹¤\n");
 
 }
 
@@ -47,12 +47,12 @@ void main()
 	int coffee;
 	int ret;
 
-	printf("¾î¶² Ä¿ÇÇ¸¦ µå¸±±î¿ä?(1:º¸ÅëÄ¿ÇÇ, 2:¼³ÅÁÄ¿ÇÇ, 3:ºí·¢Ä¿ÇÇ) : ");
+	printf("ì–´ë–¤ ì»¤í”¼ë¥¼ ë“œë¦´ê¹Œìš”?(1:ë³´í†µì»¤í”¼, 2:ì„¤íƒ•ì»¤í”¼, 3:ë¸”ë™ì»¤í”¼) : ");
 	scanf("%d", &coffee);
 
 	ret = coffee_machine(coffee);
 
-	printf("\n#6. Ä¿ÇÇ¸¦ µå¸°´Ù\n");
+	printf("\n#6. ì»¤í”¼ë¥¼ ë“œë¦°ë‹¤\n");
 }
 
 */
@@ -71,7 +71,7 @@ int calc(int v1, int v2, int op)
 	case 2: result = v1 - v2; break;
 	case 3: result = v1 * v2; break;
 	case 4: result = v1 / v2; break;
-	default: printf("Àß¸øµÈ ¿¬»êÀÚÀÔ´Ï´Ù.\n"); break;
+	default: printf("ì˜ëª»ëœ ì—°ì‚°ìì…ë‹ˆë‹¤.\n"); break;
 
 	}
 	return result;
@@ -80,14 +80,14 @@ void main()
 {
 	int a, b, c;
 	int op;
-	printf("Ã¹ ¹øÂ° ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+	printf("ì²« ë²ˆì§¸ ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 	scanf("%d", &a);
-	printf("µÎ ¹øÂ° ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+	printf("ë‘ ë²ˆì§¸ ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 	scanf("%d", &b);
-	printf("¿¬»êÀÚ(1: +, 2: -, 3: *, 4: /) : ");
+	printf("ì—°ì‚°ì(1: +, 2: -, 3: *, 4: /) : ");
 	scanf("%d", &op);
 	c = calc(a, b, op);
-	printf("°á°ú´Â %dÀÔ´Ï´Ù.\n"), c;
+	printf("ê²°ê³¼ëŠ” %dì…ë‹ˆë‹¤.\n"), c;
 }*/
 
 /*#include <stdio.h>
@@ -97,13 +97,13 @@ int a = 100;
 void func1()
 {
 	int a = 200;
-	printf("func1()¿¡¼­ a = %d\n", a);
+	printf("func1()ì—ì„œ a = %d\n", a);
 
 }
 
 void main() {
 	func1();
-	printf("main()¿¡¼­ a = %d\n", a);
+	printf("main()ì—ì„œ a = %d\n", a);
 }*/
 
 /*#include <stdio.h>
@@ -111,7 +111,7 @@ void main() {
 void func1()
 
 {
-	printf("void Çü ÇÔ¼ö´Â µ¹·ÁÁÙ °Ô ¾øÀ½.\n");
+	printf("void í˜• í•¨ìˆ˜ëŠ” ëŒë ¤ì¤„ ê²Œ ì—†ìŒ.\n");
 }
 
 int func2()
@@ -126,7 +126,7 @@ void main()
 	func1();
 
 	a = func2();
-	printf("func2()¿¡¼­ ¸®ÅÏµÈ °ªÀº %d\n", a);
+	printf("func2()ì—ì„œ ë¦¬í„´ëœ ê°’ì€ %d\n", a);
 }*/
 
 /*#include <stdio.h>
@@ -134,7 +134,7 @@ void func1(int a)
 
 {
 	a = a + 1;
-	printf("Àü´Ş¹ŞÀº a ==> %d\n", a);
+	printf("ì „ë‹¬ë°›ì€ a ==> %d\n", a);
 }
 
 void main()
@@ -142,7 +142,7 @@ void main()
 	int a = 10;
 
 	func1(a);
-	printf("func1() ½ÇÇà ÈÄÀÇ a ==> %d", a);
+	printf("func1() ì‹¤í–‰ í›„ì˜ a ==> %d", a);
 }*/
 
 /*#include <stdio.h>
@@ -150,7 +150,7 @@ void main()
 void func1(int* a)
 {
 	*a = *a + 1;
-	printf("Àü´Ş¹ŞÀº a ==> %d\n", *a);
+	printf("ì „ë‹¬ë°›ì€ a ==> %d\n", *a);
 }
 
 void main()
@@ -158,32 +158,32 @@ void main()
 	int a = 10;
 
 	func1(&a);
-	printf("func1() ½ÇÇà ÈÄÀÇ a ==> %d\n", a);
+	printf("func1() ì‹¤í–‰ í›„ì˜ a ==> %d\n", a);
 }*/
 
-//±¸±¸´Ü
+//êµ¬êµ¬ë‹¨
 /*#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
-void gugu(int dan) //¸Å°³º¯¼ö ¸î´Ü
+void gugu(int dan) //ë§¤ê°œë³€ìˆ˜ ëª‡ë‹¨
 {
-	int i; // º¯¼ö ¼±¾ğ
+	int i; // ë³€ìˆ˜ ì„ ì–¸
 	for (i = 1; i <= 9; i++)
 	{
 		printf("%d * %d = %d\n", dan, i, dan * i);
 	}
 }
-void main() //Ãâ·Â
+void main() //ì¶œë ¥
 {
 	int input;
-	printf("±¸±¸´Ü ¸î ´ÜÀ» Ãâ·ÂÇÒ±î¿ä? : ");
+	printf("êµ¬êµ¬ë‹¨ ëª‡ ë‹¨ì„ ì¶œë ¥í• ê¹Œìš”? : ");
 	scanf("%d", &input);
 
 	gugu(input);
 }
 */
 
-//´ë¼Ò¹®ÀÚ º¯È¯
+//ëŒ€ì†Œë¬¸ì ë³€í™˜
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
@@ -195,54 +195,54 @@ void main() //Ãâ·Â
 	char str[100];
 	int i;
 
-	// ¹®ÀÚ¿­ ÃÊ±âÈ­ (»ç½Ç »ı·«ÇØµµ ±¦ÂúÀ½)
+	// ë¬¸ìì—´ ì´ˆê¸°í™” (ì‚¬ì‹¤ ìƒëµí•´ë„ ê´œì°®ìŒ)
 	for (i = 0; i < 100; i++)
 		str[i] = '\0';
 
-	// ¹®ÀÚ¿­ ÀÔ·Â
-	printf("¹®ÀÚ¿­À» ÀÔ·ÂÇÏ¼¼¿ä : ");
-	scanf("%s", str);  // °ø¹é ¾øÀÌ ÀÔ·ÂÇÒ °æ¿ì¸¸ À¯È¿
+	// ë¬¸ìì—´ ì…ë ¥
+	printf("ë¬¸ìì—´ì„ ì…ë ¥í•˜ì„¸ìš” : ");
+	scanf("%s", str);  // ê³µë°± ì—†ì´ ì…ë ¥í•  ê²½ìš°ë§Œ ìœ íš¨
 
-	// ´ë¼Ò¹®ÀÚ º¯È¯
+	// ëŒ€ì†Œë¬¸ì ë³€í™˜
 	for (i = 0; i < strlen(str); i++)
 	{
-		if (str[i] >= 'a' && str[i] <= 'z')  // ¼Ò¹®ÀÚ¸é
+		if (str[i] >= 'a' && str[i] <= 'z')  // ì†Œë¬¸ìë©´
 		{
-			str[i] = str[i] - ('a' - 'A');  // ´ë¹®ÀÚ·Î
+			str[i] = str[i] - ('a' - 'A');  // ëŒ€ë¬¸ìë¡œ
 		}
-		else if (str[i] >= 'A' && str[i] <= 'Z')  // ´ë¹®ÀÚ¸é
+		else if (str[i] >= 'A' && str[i] <= 'Z')  // ëŒ€ë¬¸ìë©´
 		{
-			str[i] = str[i] + ('a' - 'A');  // ¼Ò¹®ÀÚ·Î
+			str[i] = str[i] + ('a' - 'A');  // ì†Œë¬¸ìë¡œ
 		}
-		// ´Ù¸¥ ¹®ÀÚ(¼ıÀÚ, ±âÈ£ µî)´Â ¹«½Ã
+		// ë‹¤ë¥¸ ë¬¸ì(ìˆ«ì, ê¸°í˜¸ ë“±)ëŠ” ë¬´ì‹œ
 	}
 
-	// º¯È¯µÈ ¹®ÀÚ¿­ Ãâ·Â
-	printf("º¯È¯µÈ ¹®ÀÚ¿­ : %s\n", str);
+	// ë³€í™˜ëœ ë¬¸ìì—´ ì¶œë ¥
+	printf("ë³€í™˜ëœ ë¬¸ìì—´ : %s\n", str);
 
 	return 0;
 }  // main
 */
-//·Î¶Ç ÃßÃ·
+//ë¡œë˜ ì¶”ì²¨
 
-/*int val[6]; // ·Î¶Ç ¹øÈ£¸¦ ÀúÀåÇÒ ¹è¿­
+/*int val[6]; // ë¡œë˜ ë²ˆí˜¸ë¥¼ ì €ì¥í•  ë°°ì—´
 int i, j, k;
 int temp;
-int num[45]; // 1~45±îÁöÀÇ ¼ıÀÚ¸¦ ÀúÀåÇÒ ¹è¿­
+int num[45]; // 1~45ê¹Œì§€ì˜ ìˆ«ìë¥¼ ì €ì¥í•  ë°°ì—´
 int main()
 {
 	for (i = 0; i < 45; i++)
-		num[i] = i + 1; // 1~45±îÁöÀÇ ¼ıÀÚ ÀúÀå
-	// ³­¼ö ¹ß»ıÀ» À§ÇÑ ÃÊ±âÈ­
+		num[i] = i + 1; // 1~45ê¹Œì§€ì˜ ìˆ«ì ì €ì¥
+	// ë‚œìˆ˜ ë°œìƒì„ ìœ„í•œ ì´ˆê¸°í™”
 
-srand(time(NULL)); // ³­¼ö ÃÊ±âÈ­
+srand(time(NULL)); // ë‚œìˆ˜ ì´ˆê¸°í™”
 for (i = 0; i < 6; i++)
 {
-	k = rand() % (45 - i); // 0~(44-i)±îÁöÀÇ ³­¼ö ¹ß»ı
-	val[i] = num[k]; // ³­¼ö¿¡ ÇØ´çÇÏ´Â ¹øÈ£¸¦ val¿¡ ÀúÀå
-	num[k] = num[44 - i]; // ¼±ÅÃµÈ ¹øÈ£¸¦ ¹è¿­ÀÇ ¸¶Áö¸·À¸·Î ÀÌµ¿
+	k = rand() % (45 - i); // 0~(44-i)ê¹Œì§€ì˜ ë‚œìˆ˜ ë°œìƒ
+	val[i] = num[k]; // ë‚œìˆ˜ì— í•´ë‹¹í•˜ëŠ” ë²ˆí˜¸ë¥¼ valì— ì €ì¥
+	num[k] = num[44 - i]; // ì„ íƒëœ ë²ˆí˜¸ë¥¼ ë°°ì—´ì˜ ë§ˆì§€ë§‰ìœ¼ë¡œ ì´ë™
 }
-// Á¤·Ä
+// ì •ë ¬
 for (i = 0; i < 5; i++)
 {
 	for (j = i + 1; j < 6; j++)
@@ -255,7 +255,7 @@ for (i = 0; i < 5; i++)
 		}
 	}
 }
-printf("·Î¶Ç ¹øÈ£ : ");
+printf("ë¡œë˜ ë²ˆí˜¸ : ");
 for (i = 0; i < 6; i++)
 	printf("%d ", val[i]);
 printf("\n");
@@ -271,18 +271,18 @@ void main()
 	char ch;
 	char s[20];
 
-	printf("Á¤¼ö¸¦ ÀÔ·Â :");
+	printf("ì •ìˆ˜ë¥¼ ì…ë ¥ :");
 	scanf("%d", &a);
-	printf("½Ç¼ö¸¦ ÀÔ·Â :");
+	printf("ì‹¤ìˆ˜ë¥¼ ì…ë ¥ :");
 	scanf("%f", &b);
-	printf("¹®ÀÚ¸¦ ÀÔ·Â :");
-	scanf(" %c", &ch); // °ø¹éÀ» ³Ö¾îÁÖ¸é ¹öÆÛ¿¡ ³²¾ÆÀÖ´Â °³Çà¹®ÀÚ¸¦ ¹«½ÃÇÔ
-	printf("¹®ÀÚ¿­À» ÀÔ·Â :");
+	printf("ë¬¸ìë¥¼ ì…ë ¥ :");
+	scanf(" %c", &ch); // ê³µë°±ì„ ë„£ì–´ì£¼ë©´ ë²„í¼ì— ë‚¨ì•„ìˆëŠ” ê°œí–‰ë¬¸ìë¥¼ ë¬´ì‹œí•¨
+	printf("ë¬¸ìì—´ì„ ì…ë ¥ :");
 	scanf("%s", s);
 	
-	print("\n Á¤¼öÀÇ ½ÊÁø¼ö ==? %d\n", a);
-	printf("Á¤¼öÀÇ 8Áø¼ö ==? %o\n", a);
-	printf("Á¤¼öÀÇ 16Áø¼ö ==> %x\n", a);
+	print("\n ì •ìˆ˜ì˜ ì‹­ì§„ìˆ˜ ==? %d\n", a);
+	printf("ì •ìˆ˜ì˜ 8ì§„ìˆ˜ ==? %o\n", a);
+	printf("ì •ìˆ˜ì˜ 16ì§„ìˆ˜ ==> %x\n", a);
 }*/
 
 /*#include <stdio.h>
@@ -291,8 +291,8 @@ void main()
 {
 	char s[20];
 
-	printf("¹®ÀÚ¿­À» ÀÔ·Â :");
-	gets(s); //ÃÖ´ë 19ÀÚ ±îÁö ÀÔ·Â°¡´É.
+	printf("ë¬¸ìì—´ì„ ì…ë ¥ :");
+	gets(s); //ìµœëŒ€ 19ì ê¹Œì§€ ì…ë ¥ê°€ëŠ¥.
 
 	puts(s);
 }*/
@@ -306,19 +306,19 @@ void main()
 	char input[5];
 	int i;
 
-	printf("ºñ¹Ğ¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+	printf("ë¹„ë°€ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 	for(i=0; i<=4; i++)
 		input[i] = getch();
 
 	if (strncmp(password, input, 4) == 0)
 	{
-		printf("ºñ¹Ğ¹øÈ£°¡ ÀÏÄ¡ÇÕ´Ï´Ù.\n");
+		printf("ë¹„ë°€ë²ˆí˜¸ê°€ ì¼ì¹˜í•©ë‹ˆë‹¤.\n");
 	}
 	else
 	{
 		for (i = 0; i <= 4; i++)
-			putch(input[i]); // ÀÔ·ÂµÈ ºñ¹Ğ¹øÈ£ ÃÊ±âÈ­
-		printf("ºñ¹Ğ¹øÈ£°¡ Æ²¸³´Ï´Ù.\n");
+			putch(input[i]); // ì…ë ¥ëœ ë¹„ë°€ë²ˆí˜¸ ì´ˆê¸°í™”
+		printf("ë¹„ë°€ë²ˆí˜¸ê°€ í‹€ë¦½ë‹ˆë‹¤.\n");
 	}
 }*/
 
@@ -326,8 +326,8 @@ void main()
 #include <stdio.h>
 void main()
 {
-	//char s[20];//ÀĞ¾î¿Ã ¼ö ÀÖ´Â ¹®ÀÚ¿­ÀÇ ¼ö, ÀúÀåÇÒ ¹è¿­"
-	/*FILE* rfp; //º¯¼öÀÌ¸§
+	//char s[20];//ì½ì–´ì˜¬ ìˆ˜ ìˆëŠ” ë¬¸ìì—´ì˜ ìˆ˜, ì €ì¥í•  ë°°ì—´"
+	/*FILE* rfp; //ë³€ìˆ˜ì´ë¦„
 	int hap = 0;
 	int in, i;
 
@@ -339,15 +339,15 @@ void main()
 		hap = hap + in;
 	}
 
-	printf("ÇÕ°è ==> %d\n", hap);
+	printf("í•©ê³„ ==> %d\n", hap);
 
-	fclose(rfp);//ansi·Î ÀÎÄÚµùµÈ °Ç ÀßÀĞ´Âµ¥ utf=8·Î ÇÑ°Ç ±Û¾¾°¡ ±úÁö´õ¶ó.
+	fclose(rfp);//ansië¡œ ì¸ì½”ë”©ëœ ê±´ ì˜ì½ëŠ”ë° utf=8ë¡œ í•œê±´ ê¸€ì”¨ê°€ ê¹¨ì§€ë”ë¼.
 }*/
 	/*char s[20];
 	FILE* wfp;
 
 	wfp = fopen("C:\\Users\\AISW-006\\Desktop\\data.txt", "w");
-	printf("¹®ÀÚ¿­À» ÀÔ·ÂÇÏ¼¼¿ä : ");
+	printf("ë¬¸ìì—´ì„ ì…ë ¥í•˜ì„¸ìš” : ");
 	gets(s);
 
 	fputs(s, wfp);
@@ -361,11 +361,13 @@ void main()
 
 	for (i = 0; i < 5; i++)
 	{
-		printf("¼ıÀÚ %d : ", i + 1);
+		printf("ìˆ«ì %d : ", i + 1);
 		scanf(" %d", &in);
 		hap = hap + in;
 	}
-	fprintf(wfp, "ÇÕ°è ==> : %d\n", hap);
+	fprintf(wfp, "í•©ê³„ ==> : %d\n", hap);
 
 	fclose(wfp);
 }
+
+//code line for commit add

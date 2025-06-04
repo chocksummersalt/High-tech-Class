@@ -1,35 +1,35 @@
-//´ë¹®ÀÚÀÌ°Å³ª ¼Ò¹®ÀÚ·Î ½ÃÀÛÇÏ´Â Çà
+//ëŒ€ë¬¸ìžì´ê±°ë‚˜ ì†Œë¬¸ìžë¡œ ì‹œìž‘í•˜ëŠ” í–‰
 select *
 from t_reg
 where regexp_like(text, '[a-zA-Z]');
 
-//¼Ò¹®ÀÚ³ª ¼ýÀÚ·Î ½ÃÀÛÇÏ´Â Çà
+//ì†Œë¬¸ìžë‚˜ ìˆ«ìžë¡œ ì‹œìž‘í•˜ëŠ” í–‰
 select *
 from t_reg
 where regexp_like(text, '[a-z] [0-9]');
-// °ø¹éÀÌ ÀÖ´Â Çà
+// ê³µë°±ì´ ìžˆëŠ” í–‰
 select *
 from t_reg
 where regexp_like(text, '[[:space:]]');
-//¼ýÀÚ¿Í ¼Ò¹®ÀÚ°¡ ¿¬¼ÓÀûÀ¸·Î 3°³°¡ ºÙ¾îÀÖ´Â Çà
+//ìˆ«ìžì™€ ì†Œë¬¸ìžê°€ ì—°ì†ì ìœ¼ë¡œ 3ê°œê°€ ë¶™ì–´ìžˆëŠ” í–‰
 select *
 from t_reg
 where regexp_like(text, '[0-9][a-z]{3}');
-// ´ë¹®ÀÚ°¡ ÀÖ´Â Çà
+// ëŒ€ë¬¸ìžê°€ ìžˆëŠ” í–‰
 select *
 from t_reg
 where regexp_like(text, '[[:upper:]]');
 
 
-//´ë¹®ÀÚ MÀ¸·Î ½ÃÀÛÇÏ°í ÀÌ¾î¼­ o³ª a·Î ½ÃÀÛÇÏ´Â Çà
+//ëŒ€ë¬¸ìž Mìœ¼ë¡œ ì‹œìž‘í•˜ê³  ì´ì–´ì„œ oë‚˜ aë¡œ ì‹œìž‘í•˜ëŠ” í–‰
 select name, id
 from student
 where regexp_like(id, '^M(a|o)');
-//¼ýÀÚ·Î ½ÃÀÛÇÏ°Å³ª ¼Ò¹®ÀÚ·Î ½ÃÀÛÇÏ´Â Çà
+//ìˆ«ìžë¡œ ì‹œìž‘í•˜ê±°ë‚˜ ì†Œë¬¸ìžë¡œ ì‹œìž‘í•˜ëŠ” í–‰
 select *
 from t_reg
 where regexp_like(text, '^[0-9]|^[a-z]');
-//¼ýÀÚ³ª ¼Ò¹®ÀÚ·Î ½ÃÀÛÇÏ´Â ÇàÀ» Á¦°Å
+//ìˆ«ìžë‚˜ ì†Œë¬¸ìžë¡œ ì‹œìž‘í•˜ëŠ” í–‰ì„ ì œê±°
 select *
 from t_reg
 where regexp_like(text, '^[^0-9a-z]');
@@ -37,7 +37,7 @@ where regexp_like(text, '^[^0-9a-z]');
 select *
 from t_reg
 where not regexp_like(text, '[a-z]');
-//10À¸·Î ½ÃÀÛÇÏ´Â ¾ÆÀÌÇÇ ÃßÃâ
+//10ìœ¼ë¡œ ì‹œìž‘í•˜ëŠ” ì•„ì´í”¼ ì¶”ì¶œ
 select *
 from t_reg2 
 where regexp_like(ip, '^[10]{2}');
@@ -48,9 +48,9 @@ where regexp_like(ip, '^[10]{2}');
 //regexp_replace
 
 //join grammar
-select e.empno, e.ename, d.dname // emp, deptÈ£Ãâ
-from emp e, dept d // emp¸¦ e ¶ó°í ºÎ¸£°Ú´Ù. dept¸¦ d¶ó°í ºÎ¸£°Ú´Ù
-where e.deptno = d.deptno;//e¿Í dÀÇ deptno°¡ °°Àº °Íµé È£Ãâ
+select e.empno, e.ename, d.dname // emp, deptí˜¸ì¶œ
+from emp e, dept d // empë¥¼ e ë¼ê³  ë¶€ë¥´ê² ë‹¤. deptë¥¼ dë¼ê³  ë¶€ë¥´ê² ë‹¤
+where e.deptno = d.deptno;//eì™€ dì˜ deptnoê°€ ê°™ì€ ê²ƒë“¤ í˜¸ì¶œ
 
 select s.name "STU_NAME", d.dname  "DEPT_NAME"
 from student s , department d
@@ -74,15 +74,15 @@ from student s, score o, hakjum h
 where s.studno = o.studno;
 and o.total >=h.min_point
 and o.total <=h.max_point;
-//1¹ø ¿¹Á¦
+//1ë²ˆ ì˜ˆì œ
 select s.name "stu_name", s.deptno1 "deptno1", d.dname "dept_name"
 from student s, department d
 where s.deptno1 = d.deptno;
-//2¹ø ¿¹Á¦
+//2ë²ˆ ì˜ˆì œ
 select e.name , e.position, e.pay, p.s_pay, p.e_pay
 from emp2 e, p_grade p
 where e.position = p.position;
-//3¹ø ¿¹Á¦
+//3ë²ˆ ì˜ˆì œ
 
 
 from emp2
@@ -105,22 +105,22 @@ FROM
     EMP2 E
 ORDER BY AGE;
 
-//¿¹Á¦ 4
+//ì˜ˆì œ 4
 select c.gname "cust_name", to_char(c.point,'9,999,999') "pont", g.gname "gift_name"
 from customer c, gift g
 where g.g_start <= c.point and g.gname = 'Notebook';
 
-//¿¹Á¦ 5
+//ì˜ˆì œ 5
 select * from professor;
 select p1.profno, p1.name, p1.hiredate
 from professor p1, professor p2
 where p2.hiredate < p1.hiredate
 group by p1.profno, p1.name, p1.hiredate;
 
-//¿¹Á¦ 6
-// 1¹ø ÇàºÎÅÍ ½ÃÀÛÇØ¼­ ´ëÀÀÇÏ´Â °Í ³¢¸® Á¶ÀÎÇÏ°Ô µÇ´Âµ¥ ÀÔ»çÀÏÀ» ±âÁØÀ¸·Î ¿À¸§Â÷¼ø ÇÏ±â¶§¹®¿¡
-// smith°¡ Á¦ÀÏ ºü¸£´Ï±î ½º¹Ì½º¸¦ ±âÁØÀ¸·Î ±× ´ÙÀ½ ÀÔ»çÀÏ Âß ³»·Á°¡´Â. »ç¶÷ ¼ö¸¦ ¼¼´Â °Å´Ï±î
-// »ç¶÷¼ö¸¦ Ä«¿îÆ® ÇØ¼­ ¼ýÀÚ¸¦ ¼¼ÁÖ´Â°Å¾ß. ÀÌÇØ¿Ï·á.
+//ì˜ˆì œ 6
+// 1ë²ˆ í–‰ë¶€í„° ì‹œìž‘í•´ì„œ ëŒ€ì‘í•˜ëŠ” ê²ƒ ë¼ë¦¬ ì¡°ì¸í•˜ê²Œ ë˜ëŠ”ë° ìž…ì‚¬ì¼ì„ ê¸°ì¤€ìœ¼ë¡œ ì˜¤ë¦„ì°¨ìˆœ í•˜ê¸°ë•Œë¬¸ì—
+// smithê°€ ì œì¼ ë¹ ë¥´ë‹ˆê¹Œ ìŠ¤ë¯¸ìŠ¤ë¥¼ ê¸°ì¤€ìœ¼ë¡œ ê·¸ ë‹¤ìŒ ìž…ì‚¬ì¼ ì­‰ ë‚´ë ¤ê°€ëŠ”. ì‚¬ëžŒ ìˆ˜ë¥¼ ì„¸ëŠ” ê±°ë‹ˆê¹Œ
+// ì‚¬ëžŒìˆ˜ë¥¼ ì¹´ìš´íŠ¸ í•´ì„œ ìˆ«ìžë¥¼ ì„¸ì£¼ëŠ”ê±°ì•¼. ì´í•´ì™„ë£Œ.
 SELECT e1.empno, e1.ename, e1.hiredate, COUNT(e2.hiredate) "COUNT"
 FROM emp e1, emp e2
 WHERE e2.hiredate(+) < e1.hiredate
@@ -131,7 +131,7 @@ ORDER BY 4;
 
 
 //ddl ctas create table as select 
-//delete ´Â µµ¸ÞÀÎ¸¸ ³¯¶ó°¨ truncate´Â ÀÚ·á Æ²µµ ³¯¶ó°¨ dropÀº ÀüºÎ ³¯¶ó°¨
+//delete ëŠ” ë„ë©”ì¸ë§Œ ë‚ ë¼ê° truncateëŠ” ìžë£Œ í‹€ë„ ë‚ ë¼ê° dropì€ ì „ë¶€ ë‚ ë¼ê°
 
 create table new_table
 (no Number(3), name varchar(10), birth date );
@@ -181,14 +181,14 @@ select * from new_emp2;
 
 drop new_emp2;
 
-//update set ¾µ¶§´Â where Á¶°ÇÀ» ²À ½áÁà¾ßÇÔ. ¾È±×·¯¸é ÀüºÎ´Ù 200ÀÌ µÇ¾î¹ö¸².
+//update set ì“¸ë•ŒëŠ” where ì¡°ê±´ì„ ê¼­ ì¨ì¤˜ì•¼í•¨. ì•ˆê·¸ëŸ¬ë©´ ì „ë¶€ë‹¤ 200ì´ ë˜ì–´ë²„ë¦¼.
 update professor
 set pay = pay * 1.15
 where position = (select position from professor where name = 'sharon stone')
 and pay <250;
 
-//dml ¿¬½À
-insert into dept2[("ºÎ¼­¹øÈ£", "ºÎ¼­¸í")]
+//dml ì—°ìŠµ
+insert into dept2[("ë¶€ì„œë²ˆí˜¸", "ë¶€ì„œëª…")]
 values (9000, "temp_1");
 
 select *

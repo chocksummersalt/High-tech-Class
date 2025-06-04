@@ -5,7 +5,7 @@ SELECT ename, RPAD(ename, 9, SUBSTR('23456789', LENGTHB(ename))) as namenumber
 from emp
 where deptno=10 ;
 
-//LTRIM, RTRIM (Ä®·³¸í, Á¦°ÅÇÒ ¹®ÀÚ)
+//LTRIM, RTRIM (ì¹¼ëŸ¼ëª…, ì œê±°í•  ë¬¸ì)
 SELECT ename,    REPLACE (ename, substr(ename,2,2),'--')"REPLACE"
 from emp
 where deptno=20;
@@ -24,12 +24,12 @@ where deptno1 = 101;
 
 select trunc(months_between(sysdate,'14/08/31')) from dual;
 
-//¼ıÀÚÃ³·³ »ı±ä ¹®ÀÚ¸¸ º¯È¯ °¡´É
+//ìˆ«ìì²˜ëŸ¼ ìƒê¸´ ë¬¸ìë§Œ ë³€í™˜ ê°€ëŠ¥
 
 select sysdate, to_char(sysdate, 'yyyy') "yyyy",
                 to_char(sysdate, 'rrrr') "rrrr"
 from dual;
-//to_char ¹®ÀÚº¯È¯ ¿¬½À
+//to_char ë¬¸ìë³€í™˜ ì—°ìŠµ
 select studno, name, to_char(birthday, 'dd')||'-'||to_char(birthday,'mm')||'-'||to_char(birthday,'yy')
 from student
 where to_char(birthday, 'mm') = 01;
@@ -38,13 +38,13 @@ select empno, ename, hiredate
 from emp
 where to_char(hiredate,'mm') in(01,02,03);
 
-// is null ¿¬½À
+// is null ì—°ìŠµ
 select empno, ename, hiredate, to_char((sal*12)+comm, '$999,999') "sal",
 to_char(((sal*12)+comm)*1.15, '$999,999') "15%up"
 from emp
 where comm is not null;
 
-//NVL ¿¹Á¦
+//NVL ì˜ˆì œ
 select profno, name, pay, NVL(bonus,0)"BONUS", (pay*12+nvl(bonus,0)) "TOTAL"
 from Professor
 where deptno = 201;
@@ -54,7 +54,7 @@ from emp
 where deptno = 30;
 
 
-//decode ¿¹Á¦
+//decode ì˜ˆì œ
 SELECT  name,   jumin,  DECODE(SUBSTR(jumin, 7, 1), '1', 'man', 'woman') AS "GENDER"
 FROM student
 WHERE deptno1 = 101;

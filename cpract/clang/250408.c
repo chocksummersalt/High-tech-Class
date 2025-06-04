@@ -1,82 +1,82 @@
 
-/*//º¯¼ö ¼±¾ğ
+/*//ë³€ìˆ˜ ì„ ì–¸
 int i;
 char bf[20];
 FILE* wfp;
 FILE* rfp;
 
-// ÆÄÀÏ ¿­±â
+// íŒŒì¼ ì—´ê¸°
 rfp = fopen("C:\\Users\\AISW-006\\Desktop\\data.txt", "r");
 wfp = fopen("C:\\Users\\AISW-006\\Desktop\\data2.txt", "w");
-//ÆÄÀÏ ÀĞ±â
+//íŒŒì¼ ì½ê¸°
 while (1)
 {
-	fgets(bf, sizeof(bf), rfp); //ÆÄÀÏ¿¡¼­ ÇÑ ÁÙ ÀĞ±â
-	if (feof(rfp)) break; //ÆÄÀÏ ³¡¿¡ µµ´ŞÇÏ¸é Á¾·á
+	fgets(bf, sizeof(bf), rfp); //íŒŒì¼ì—ì„œ í•œ ì¤„ ì½ê¸°
+	if (feof(rfp)) break; //íŒŒì¼ ëì— ë„ë‹¬í•˜ë©´ ì¢…ë£Œ
 
-	for (i = strlen(bf) - 2; i >= 0; i--) //¹®ÀÚ¿­ÀÇ ³¡¿¡¼­ºÎÅÍ °Å²Ù·Î ÀĞ±â
+	for (i = strlen(bf) - 2; i >= 0; i--) //ë¬¸ìì—´ì˜ ëì—ì„œë¶€í„° ê±°ê¾¸ë¡œ ì½ê¸°
 	{
-		fprintf(wfp, "%c", bf[i]); //°Å²Ù·Î ÀĞÀº ¹®ÀÚ Ãâ·Â
+		fprintf(wfp, "%c", bf[i]); //ê±°ê¾¸ë¡œ ì½ì€ ë¬¸ì ì¶œë ¥
 	}
 	fprintf(wfp, "\n");
 	if (feof(rfp))
-		break; //ÆÄÀÏ ³¡¿¡ µµ´ŞÇÏ¸é Á¾·á
-	// ¹İ´ë ¼ø¼­·Î ÆÄÀÏ¿¡ ¾²±â
+		break; //íŒŒì¼ ëì— ë„ë‹¬í•˜ë©´ ì¢…ë£Œ
+	// ë°˜ëŒ€ ìˆœì„œë¡œ íŒŒì¼ì— ì“°ê¸°
 }
-//ÆÄÀÏ ´İ±â
+//íŒŒì¼ ë‹«ê¸°
 fclose(rfp);
 fclose(wfp);
 }*/
 
 /* {
-	//int aa[10000]; //¸Ş¸ğ¸®´Â ÇÒ´çµÇ¾ú´Âµ¥ ¾È¾²¸é ³¶ºñµÇ´Â °ÍÀÓ.
+	//int aa[10000]; //ë©”ëª¨ë¦¬ëŠ” í• ë‹¹ë˜ì—ˆëŠ”ë° ì•ˆì“°ë©´ ë‚­ë¹„ë˜ëŠ” ê²ƒì„.
 	int* p;
 	int i, hap = 0;
 	int cnt;
 
-	printf("¸î °³ÀÇ ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ½Ã°Ú½À´Ï±î? : ");
+	printf("ëª‡ ê°œì˜ ìˆ«ìë¥¼ ì…ë ¥í•˜ì‹œê² ìŠµë‹ˆê¹Œ? : ");
 	scanf("%d", &cnt);
 
 
 	p = (int*)malloc(sizeof(int) * cnt);
 	printf(p);
 
-		for (i = 0; i < cnt; i++) //cnt¸¸Å­ ¹İº¹
+		for (i = 0; i < cnt; i++) //cntë§Œí¼ ë°˜ë³µ
 	{
-		printf(" %d¹øÂ° ¼ıÀÚ :", i + 1);
+		printf(" %dë²ˆì§¸ ìˆ«ì :", i + 1);
 		scanf("%d", p + i);
 		// scanf("%d", &aa[i]);
 	}
 
 	//p = aa;
 
-	for (i = 0; i < cnt; i++) //cnt¸¸Å­ ¹İº¹
+	for (i = 0; i < cnt; i++) //cntë§Œí¼ ë°˜ë³µ
 	{
 		hap = hap + *(p + i);
 	}
 
-	printf("ÇÕ°è ==> %d\n", hap);
+	printf("í•©ê³„ ==> %d\n", hap);
 
-	free(p); //µ¿ÀûÇÒ´çÇÑ ¸Ş¸ğ¸® ÇØÁ¦
+	free(p); //ë™ì í• ë‹¹í•œ ë©”ëª¨ë¦¬ í•´ì œ
 
 }*/
 
 /*int* p, * s;
 int i, j;
 
-printf("malloc() ÇÔ¼ö »ç¿ë\n");
+printf("malloc() í•¨ìˆ˜ ì‚¬ìš©\n");
 p = (int*)malloc(sizeof(int) * 3);
 
 for(i=0; i<3; i++)
-	printf("ÇÒ´çµÈ °÷ÀÇ ÃÊ±ê°ª p[%d] ==>%d\n", i, p[i]);
+	printf("í• ë‹¹ëœ ê³³ì˜ ì´ˆê¹ƒê°’ p[%d] ==>%d\n", i, p[i]);
 
-free(p); //µ¿ÀûÇÒ´çÇÑ ¸Ş¸ğ¸® ÇØÁ¦
+free(p); //ë™ì í• ë‹¹í•œ ë©”ëª¨ë¦¬ í•´ì œ
 
-printf("\ncalloc()ÇÔ¼ö »ç¿ë\n");
+printf("\ncalloc()í•¨ìˆ˜ ì‚¬ìš©\n");
 s = (int*)calloc(sizeof(int),3);
 
 for (j = 0; j < 3; j++)
-	printf("ÇÒ´çµÈ °÷ÀÇ ÃÊ±ê°ª s[%d] ==> %d\n", j, s[j]);
+	printf("í• ë‹¹ëœ ê³³ì˜ ì´ˆê¹ƒê°’ s[%d] ==> %d\n", j, s[j]);
 
 free(s);
 
@@ -92,16 +92,16 @@ void main()
 
 	for (i = 0; i < 3; i++)
 	{
-		printf("%d ¹øÂ° ¹®ÀÚ¿­ :", i + 1);
+		printf("%d ë²ˆì§¸ ë¬¸ìì—´ :", i + 1);
 
 		gets(data[i]);
 	}
 
-	printf("\nÀÔ·Â°ú ¹İ´ë·Î Ãâ·Â\n");
+	printf("\nì…ë ¥ê³¼ ë°˜ëŒ€ë¡œ ì¶œë ¥\n");
 
 	for (i = 2; i >= 0; i--)
 	{
-		printf("%d ¹øÂ° ¹®ÀÚ¿­ : %s\n", i + 1, data[i]);
+		printf("%d ë²ˆì§¸ ë¬¸ìì—´ : %s\n", i + 1, data[i]);
 	}
 }*/
 
@@ -112,7 +112,7 @@ void main()
 
 	for (i = 0; i < 3; i++)
 	{
-		printf("%d ¹øÂ° ¹®ÀÚ¿­ : ", i + 1);
+		printf("%d ë²ˆì§¸ ë¬¸ìì—´ : ", i + 1);
 		gets(imsi);
 
 		size = strlen(imsi);
@@ -130,13 +130,13 @@ void main()
 	int* b = &a;
 	int** c = &b;
 
-	printf("a¿¡ ÀúÀåµÈ °ª = %d\n", a);
-	printf("b¿¡ ÀúÀåµÈ °ª = %d\n", b);
-	printf("c¿¡ ÀúÀåµÈ °ª = %d\n", c);
+	printf("aì— ì €ì¥ëœ ê°’ = %d\n", a);
+	printf("bì— ì €ì¥ëœ ê°’ = %d\n", b);
+	printf("cì— ì €ì¥ëœ ê°’ = %d\n", c);
 
-	printf("b°¡ °¡¸®Å°´Â °ª = %d\n", *b);
-	printf("c°¡ °¡¸®Å°´Â °ª = %d\n", *c);
-	printf("c°¡ ÃÖÁ¾ÀûÀ¸·Î °¡¸®Å°´Â °ª = %d\n", **c);
+	printf("bê°€ ê°€ë¦¬í‚¤ëŠ” ê°’ = %d\n", *b);
+	printf("cê°€ ê°€ë¦¬í‚¤ëŠ” ê°’ = %d\n", *c);
+	printf("cê°€ ìµœì¢…ì ìœ¼ë¡œ ê°€ë¦¬í‚¤ëŠ” ê°’ = %d\n", **c);
 	*/
 	/*struct  bibim
 	{
@@ -166,13 +166,13 @@ void main()
 
 	int i;
 
-	strcpy(name[0], "È«±æµ¿");
+	strcpy(name[0], "í™ê¸¸ë™");
 
 	kor[0] = 90;
 	eng[0] = 80;
 	avg[0] = (kor[0] + eng[0]) / 2.0f;
 
-	strcpy(name[1], "ÀÌ¸í¹Ú");
+	strcpy(name[1], "ì´ëª…ë°•");
 
 	kor[1] = 50;
 	eng[1] = 30;
@@ -180,27 +180,27 @@ void main()
 
 	for(i=0; i<2; i++)
 	{
-		printf("ÀÌ¸§ ==> %s\n", name[i]);
-		printf("±¹¾î ==> %d\n", kor[i]);
-		printf("¿µ¾î ==> %d\n", eng[i]);
-		printf("Æò±Õ ==> %.2f\n", avg[i]);
+		printf("ì´ë¦„ ==> %s\n", name[i]);
+		printf("êµ­ì–´ ==> %d\n", kor[i]);
+		printf("ì˜ì–´ ==> %d\n", eng[i]);
+		printf("í‰ê·  ==> %.2f\n", avg[i]);
 	}*/
 
 
-	/*scanf("%s", name, 9);//ÃÖ´ë 9ÀÚ Á¦ÇÑ ÇÏ´Â ¹ı
+	/*scanf("%s", name, 9);//ìµœëŒ€ 9ì ì œí•œ í•˜ëŠ” ë²•
 
-	printf("±¹¾î : ");
+	printf("êµ­ì–´ : ");
 	scanf("%d", &kor);
 
-	printf("¿µ¾î : ");
+	printf("ì˜ì–´ : ");
 	scanf("%d", &eng);
 	avg = (kor + eng) / 2.0f;
 
 	printf("\n");
-	printf("ÀÌ¸§ ==> %s\n", name);
-	printf("±¹¾î ==> %d\n", kor);
-	printf("¿µ¾î ==> %d\n", eng);
-	printf("Æò±Õ ==> %.2f\n", avg);
+	printf("ì´ë¦„ ==> %s\n", name);
+	printf("êµ­ì–´ ==> %d\n", kor);
+	printf("ì˜ì–´ ==> %d\n", eng);
+	printf("í‰ê·  ==> %.2f\n", avg);
 	*/
 	/*struct student {
 		char name[10];
@@ -214,19 +214,19 @@ void main()
 
 	p = &s;
 
-	printf("ÀÌ¸§ ÀÔ·Â :");
+	printf("ì´ë¦„ ì…ë ¥ :");
 	scanf("%s",p->name);
 
-	printf("±¹¾î Á¡¼ö ÀÔ·Â :");
+	printf("êµ­ì–´ ì ìˆ˜ ì…ë ¥ :");
 	scanf("%d", &p->kor);
-	printf("¿µ¾î Á¡¼ö ÀÔ·Â :");
+	printf("ì˜ì–´ ì ìˆ˜ ì…ë ¥ :");
 	scanf("%d", &p->eng);
 
 	p->avg = (p->kor + p->eng) / 2.0f;
-	printf("ÇĞ»ıÀÌ¸§ ==> %s\n", p->name);
-	printf("±¹¾î Á¡¼ö ==> %d\n", p->kor);
-	printf("¿µ¾î Á¡¼ö ==> %d\n", p->eng);
-	printf("Æò±Õ Á¡¼ö ==> %.2f\n", p->avg);
+	printf("í•™ìƒì´ë¦„ ==> %s\n", p->name);
+	printf("êµ­ì–´ ì ìˆ˜ ==> %d\n", p->kor);
+	printf("ì˜ì–´ ì ìˆ˜ ==> %d\n", p->eng);
+	printf("í‰ê·  ì ìˆ˜ ==> %.2f\n", p->avg);
 	*/
 
 	/*union student {
@@ -239,8 +239,8 @@ void main()
 	u.tot = 300;
 	u.grade = 'A';
 
-	printf("ÃÑÁ¡ ==> %d\n", u.tot);
-	printf("ÇĞÁ¡ ==> %c\n", u.grade);
+	printf("ì´ì  ==> %d\n", u.tot);
+	printf("í•™ì  ==> %c\n", u.grade);
 	}*/
 
 	enum week { sun, mon, tue, wed, thu, fri, sat };
@@ -249,7 +249,8 @@ void main()
 	ww = sat;
 
 	if (ww == sun)
-		printf("ÀÏ¿äÀÏÀÔ´Ï´Ù.\n");
+		printf("ì¼ìš”ì¼ì…ë‹ˆë‹¤.\n");
 	else
-		printf("ÀÏ¿äÀÏÀÌ ¾Æ´Õ´Ï´Ù.\n");
-}
+		printf("ì¼ìš”ì¼ì´ ì•„ë‹™ë‹ˆë‹¤.\n");
+} 
+//code line for commit add

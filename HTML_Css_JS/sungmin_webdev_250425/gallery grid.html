@@ -1,0 +1,112 @@
+  <!DOCTYPE html>
+  <html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS Grid Layout</title>
+    <style>      
+
+    body {
+
+      background-color: #f0f0f0;
+      margin: 0;
+
+    }
+
+    .card-container {
+      width: 700px;
+      margin: 20px auto;
+      display: grid;
+
+     /* grid-template-rows:repeat(3, 100px);
+      grid-template-columns: repeat(3, 1fr);*/
+      grid-template-areas: 
+        "photo1 photo1 photo2"
+        "photo1 photo1 photo3"
+        "photo4 photo5 photo6";
+      gap : 5px;
+        
+    }
+
+    .gallery {
+      /*width: 700px;
+      border-radius: 10px;
+      overflow: hidden;
+      gap: 5px;*/
+      margin : 0;
+      padding: 0;
+
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+
+    }
+    
+
+    .photo1{
+      grid-area: photo1;
+    }
+    .photo2{
+      grid-area: photo2;
+    }
+    .photo3{
+      grid-area: photo3;
+    }
+    .photo4{
+      grid-area: photo4;
+    }
+    .photo5{
+      grid-area: photo5;
+    }
+    .photo6{
+      grid-area: photo6;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card-container">
+
+
+      <div class="photo1">
+      <img src="images/photo-1.jpg" alt="겨울 이미지">
+      </div>
+
+
+      <div class="photo2">
+      <img src="images/photo-2.jpg" alt="펭귄">
+
+
+    </div>
+
+
+      <div class="photo3">
+      <img src="images/photo-3.jpg" alt="눈 덮인 집">
+      </div>
+
+
+      <div class="photo4">
+      <img src="images/photo-4.jpg" alt="오로라">
+      </div>
+
+
+
+      <div class="photo5">
+      <img src="images/photo-5.jpg" alt="눈 앞 여자">
+      </div>
+
+
+      <div class="photo6">
+      <img src="images/photo-6.jpg" alt="빨간 새">
+      </div>
+
+
+  </div>
+
+</body>
+</html>
+

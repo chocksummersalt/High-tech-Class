@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>입력 양식을 테이블 안에 위치시켜서 두번째 열의 시작을 맞추기 바랍니다.</title></head>
+<body>
+    <h3>입력 양식을 테이블 안에 위치시켜서 두번째 열의 시작을 맞추기 바랍니다.</h3>
+    <hr>
+    <table>
+        <tr>
+            <td>이름</td>
+            <td><input type="text" size="15" value=""></td>
+        </tr>
+        <tr>
+            <td>비밀번호</td>
+            <td><input type="password" size="15" value=""></td>
+        </tr>
+        <tr>
+            <td>성별</td>
+            <td><input type="radio" size="15" value="1"> 남자</td>
+            <td><input type="radio" size="15" value="2"> 여자</td>
+        </tr>
+        <tr>
+            <td>좋아하는 음식</td>
+            <td>
+                <form> 
+                    <select name="food">
+                        <option value="1">김밥</option>
+                        <option value="2" selected>떡볶이</option>
+                        <option value="3">탕수육</option>
+                        <option value="4">어묵</option>
+                    </select>
+                </form>
+        </tr>
+        <tr>
+            <td>이메일</td>
+            <td><input type="email" size="15" value=""></td>
+        </tr>
+        <tr>
+            <td>관심분야</td>
+            <td><input type="checkbox" size="15" value="1">보안</td>
+            <td><input type="checkbox" size="15" value="2">네트워크</td>
+            <td><input type="checkbox" size="15" value="3">인공지능</td>
+        </tr>
+        <tr>
+            <td>선택과목</td>
+            <td>
+                <select name="선택과목"> 
+                    <optgroup label=실습 과목>
+                        <option value="1"selected> HTML5/css</option>
+                        <option value="2">javascript</option>
+                        <option value="3">c언어</option>
+                        <option value="4">파이썬</option>
+                    </optgroup>
+                    <optgroup label=이론 과목>
+                        <option value="1"> 멀티미디어어개론</option>
+                        <option value="2">컴퓨터개론</option>
+                    </optgroup>
+                    
+                </select>     
+    </table>
+    <input type="submit" value="전송">
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV 처리</title>
+</head>
+<body>
+    <script>
+        const csvData = "이름,나이,도시\n김철수,25,부산\n박선영,32,대구";
+
+        document.write("<p><b>원본 CSV 데이터</b><br>" + csvData + "</p>");
+
+        const rows = csvData.split('\n'); // 행 단위 분할
+        const modifiedRows = [];
+
+        for (let i = 0; i < rows.length; i++) {
+            const cols = rows[i].split(','); // 열 단위 분할
+            cols.splice(1, 1); 
+            modifiedRows.push(cols.join(',')); // 다시 문자열로 결합
+        }
+
+        document.write("<p><b>두 번째 칼럼 제거된 결과</b><br>");
+        for (let i = 0; i < modifiedRows.length; i++) {
+            document.write(modifiedRows[i] + "<br>");
+        }
+        document.write("</p>");
+    </script>
+</body>
+</html>

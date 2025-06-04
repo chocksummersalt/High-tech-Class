@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let current = new Date();
+        let timeArray = new Array(8,9,10,11,12,13,14,15,16,17,18)
+        if(`${7<current.getHours()<19}`) 
+            document.body.style.backgroundColor = "lightskyblue"
+        else
+        document.body.style.backgriundColor = "darkblue"
+document.write("현재시간 :" + current.getHours()+"시 "+ current.getMinutes() +"분");
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>오늘 할 일</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    h2 {
+      margin-bottom: 10px;
+    }
+    #todoInput {
+      width: 200px;
+      padding: 5px;
+    }
+    #addBtn {
+      padding: 5px 10px;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    li {
+      margin: 8px 0;
+    }
+    .deleteBtn {
+      margin-left: 10px;
+      background-color: #eee;
+      border: 1px solid #ccc;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>오늘 할 일</h2>
+  <input type="text" id="todoInput" placeholder="할 일을 입력하세요" />
+  <button id="addBtn">추가</button>
+
+  <ul id="todoList"></ul>
+
+  <script>
+    const input = document.getElementById("todoInput");
+    const addBtn = document.getElementById("addBtn");
+    const list = document.getElementById("todoList");
+
+    addBtn.onclick = function () {
+      const task = input.value.trim();
+      if (task === "") return;
+
+      const li = document.createElement("li");
+      li.textContent = task;
+
+      const delBtn = document.createElement("button");
+      delBtn.textContent = "삭제";
+      delBtn.className = "deleteBtn";
+      delBtn.onclick = function () {
+        list.removeChild(li);
+      };
+
+      li.appendChild(delBtn);
+      list.appendChild(li);
+      input.value = "";
+    };
+  </script>
+</body>
+</html>

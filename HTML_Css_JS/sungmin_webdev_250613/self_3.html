@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<head>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: lightgray;
+      border: 1px solid black;
+    }
+
+    .highlight {
+      background-color: blue;
+    }
+  </style>
+</head>
+<body>
+  <div id="myBox" class="box"></div>
+  <button id="toggleBtn" onclick="toggleBoxColor()">토글 버튼</button>
+
+  <script>
+    function toggleBoxColor() {
+      const box = document.getElementById("myBox");
+      box.classList.toggle("highlight");
+    }
+  </script>
+</body>
+
+</html>

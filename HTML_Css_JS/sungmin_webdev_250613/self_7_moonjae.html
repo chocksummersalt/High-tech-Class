@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 변환</title>
+</head>
+<body>
+    <h1>이미지 변환</h1>
+    <img id="myImage" src="./image/apple.png" alt="과일 이미지" width="200">
+    <button onclick="changeImage()">이미지 변경</button>
+
+    <script>
+        function changeImage() {
+            const image = document.getElementById("myImage");
+
+            // 현재 이미지 경로를 기준으로 판단
+            if (image.src.includes("apple.png")) {
+                image.src = "./image/banana.png";
+            } else {
+                image.src = "./image/apple.png";
+            }
+        }
+    </script>
+</body>
+</html>

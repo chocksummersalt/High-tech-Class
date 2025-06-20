@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>갤러리</title>
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+    <div class="container">
+        <h1>갤러리</h1>
+        
+        <div class="gallery" id="gallery">
+            <div class="gallery-item" data-description="아름다운 자연 풍경입니다. 푸른 하늘과 초록빛 나무들이 조화를 이루고 있습니다.">
+                <img src="https://picsum.photos/300/200?random=1" alt="자연 풍경 1">
+            </div>
+            <div class="gallery-item" data-description="도시의 야경입니다. 반짝이는 불빛들이 도시의 활기를 보여줍니다.">
+                <img src="https://picsum.photos/300/200?random=2" alt="도시 야경">
+            </div>
+            <div class="gallery-item" data-description="바다의 파도입니다. 푸른 바다와 하얀 파도가 아름다운 조화를 이룹니다.">
+                <img src="https://picsum.photos/300/200?random=3" alt="바다 풍경">
+            </div>
+            <div class="gallery-item" data-description="산의 정상에서 바라본 풍경입니다. 구름 위로 떠오르는 태양이 장관을 연출합니다.">
+                <img src="https://picsum.photos/300/200?random=4" alt="산 정상 풍경">
+            </div>
+            <div class="gallery-item" data-description="꽃밭의 아름다운 꽃들입니다. 다양한 색깔의 꽃들이 봄의 생기를 전합니다.">
+                <img src="https://picsum.photos/300/200?random=5" alt="꽃밭">
+            </div>
+            <div class="gallery-item" data-description="숲속의 작은 오솔길입니다. 나무들 사이로 비치는 햇살이 평화로움을 줍니다.">
+                <img src="https://picsum.photos/300/200?random=6" alt="숲속 오솔길">
+            </div>
+        </div>
+        
+        <div class="description" id="description">
+            <p>이미지를 클릭하면 설명이 나타납니다.</p>
+        </div>
+    </div>
+    
+    <!-- 삭제 확인 모달 -->
+    <div class="modal" id="deleteModal">
+        <div class="modal-content">
+            <h3>이미지 삭제</h3>
+            <p>이 이미지를 삭제하시겠습니까?</p>
+            <div class="modal-buttons">
+                <button id="confirmDelete" class="btn btn-danger">삭제</button>
+                <button id="cancelDelete" class="btn btn-secondary">취소</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="gallery.js"></script>
+</body>
+</html> 

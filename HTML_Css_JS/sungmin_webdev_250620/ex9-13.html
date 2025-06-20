@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML 문서의 onload</title>
+</head>
+<body>
+    
+    
+    <script>
+        function onload() {
+        alert("HTML 문서가 로딩되었습니다.");
+        console.log("HTML 문서가 로딩되었습니다.");
+        }
+    addEventListener("load", function() {
+        // HTML 문서가 로딩된 후 실행할 코드
+        console.log("HTML 문서가 로딩되었습니다.");
+    });
+    window.alert("HTML 문서가 로딩되었습니다.");    
+    </script>
+<h3>HTML 문서의 로딩 완료, onload</h3>
+<hr>
+이 페이지는 onload 리스너의 사용 예를 보여줍니다
+이 페이지가 출력되고 난 바로 직후 onload 리스너를 통해 
+경고창을 출력합니다.
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>다른 사이트로 이동 금지: preventdeFault()</p>
+    <a href="https://www.naver.com" target='_new' onclick = "return query()">네이버로 이동</a><br>
+    <a href="https://www.google.com" onclick="event.preventDefault(); alert('이동이 금지되었습니다.');">구글로 이동</a><br>
+    <script>
+        function query(){
+            let ref = confirm("네이버로 이동할까?")
+            console.log("사용자응답:", ref);
+            return ref;
+        }
+    </script>
+</body>
+</html>
